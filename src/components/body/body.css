@@ -1,0 +1,118 @@
+
+:root{
+    --primary-font :'Acme', sans-serif;
+    --secondary-font :'Peddana', serif;
+    --black-shade:  #2e2a2b;
+    --orange-shade:#d88a49;
+    --red-shade:#BB4040 ;
+    --yellow-shade:#e3b02a;
+    --white-shade: #ECE9E3 ;
+}
+#body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:87vh;
+    padding-top: 60px;
+  
+}
+#content-conatiner{
+    position: relative;
+    width:700px;
+}
+#content-container::before{
+    position: absolute;
+    content: '';
+    background-color: var(--black-shade);
+    opacity: 0.6;
+    padding:40px;
+    width:500px;
+    height:400px;
+    z-index:-1;
+    top:20vh;
+    /* left:24vw;  */
+    margin-left:-4vw;
+    border-radius:15px;
+}
+
+#input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    width: 490px;
+}
+#date-time-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#input-container>input{
+    border:none;
+    outline:none;
+    border-bottom: 2px solid var(--white-shade);
+    background-color: transparent;
+    padding: 5px 0 5px 20px;
+    font-family: var(--secondary-font);
+    font-size: 28px;
+    color: var(--white-shade);
+}
+#date-time-container input{
+    background-color: var(--white-shade);
+    border:none;
+    outline:none;
+    margin-right:10px;
+    width:150px;
+   
+}
+input:focus{
+    background-color: transparent;
+}
+#input-container>input::placeholder{
+    font-family: var(--secondary-font);
+    color:lightgray;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+#add a{
+    font-size: 30px;
+    background-color: var(--white-shade);
+    color:var(--black-shade);
+    font-weight: 900;
+    padding:0 11px;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+#add{
+    background: none;
+    outline:none;
+    border:none;
+}
+#add a:hover {
+    background-color: var(--red-shade);
+    color: var(--white-shade);
+}
+@media only screen and (max-width:768px){
+    #content-conatiner {
+        width:100%;
+    }
+    #content-container::before{
+        width:92%;
+    }
+    #content-container::before{
+        left:-8px;
+    }
+    
+    #input-container{
+        width: 100%;
+        padding:0 20px;
+    }
+    #date-time-container input{
+        margin-bottom: 5px;
+        margin-right:10px;
+        width:150px;
+    }
+}

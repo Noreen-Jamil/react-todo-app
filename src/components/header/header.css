@@ -1,0 +1,36 @@
+:root{
+    --primary-font :'Acme', sans-serif;
+    --secondary-font :'Peddana', serif;
+    --black-shade:  #2e2a2b;
+    --orange-shade:#d88a49;
+    --red-shade: #c73e33;
+    --yellow-shade:#e3b02a;
+    --white-shade: #ECE9E3 ;
+}
+#header{
+    display:flex;
+    align-items: center;
+    position: relative;
+    padding:20px;
+}
+#header::before{
+    position: absolute;
+    content: '';
+    background-color: var(--black-shade);
+    opacity: 0.4;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+#header img{
+    width:50px;
+    height:50px;
+}
+#header h1{
+    font-family : var(--primary-font);
+    font-size: 40px;
+    color:var(--white-shade);
+    margin-left: 20px;
+}

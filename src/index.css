@@ -1,0 +1,9 @@
+body{
+    background-image: url("images/bg3.png");
+    background-size: cover;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}

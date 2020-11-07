@@ -1,0 +1,103 @@
+
+:root{
+    --primary-font :'Acme', sans-serif;
+    --secondary-font :'Peddana', serif;
+    --black-shade:  #2e2a2b;
+    --orange-shade:#d88a49;
+    --red-shade:#BB4040 ;
+    --yellow-shade:#e3b02a;
+    --white-shade: #ECE9E3 ;
+}
+#list-container{
+    margin:30px 0;
+    list-style-type:none;
+    color: var(--white-shade);
+    position: relative;
+    max-height:300px;
+    overflow-y: auto;
+}
+#list-container li{
+    border-bottom:3px solid var(--orange-shade);
+}
+#list-container li #li-content-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 27px;
+    padding:0 5px;
+}
+#list-container hr{
+    width:100%;
+    position: absolute;
+    display:none;
+    left:-2px;
+}
+.to-do-detail-container>span{
+    font-family: var(--secondary-font);
+    font-size: 25px;
+    width:100%;
+    color: var(--yellow-shade);
+   
+}
+.to-do-detail-container{
+    display: flex;
+    flex-direction: column;
+    width:75%;
+}
+.done, .delete{
+    font-size: 23px;
+}
+.done:hover{
+   color:#228009 ;
+}
+.delete:hover{
+    color:var(--red-shade);
+}
+
+.date-time-container-list{
+    display: flex;
+    justify-content: flex-end;
+}
+.date-time-container-list span{
+    font-size:15px ;
+    margin-right:9px;
+}
+
+.to-do-edit-container{
+    display: flex;
+    flex-direction: column;
+    width:75%;
+    display:none;
+    margin:4px 0;
+}
+.to-do-edit-container>input{
+    background: none;
+    border:1px solid var(--orange-shade);
+    color: var(--yellow-shade);
+    font-size: 17px;
+    outline:none;
+    padding:2px;
+    /* justify-content: flex-end; */
+}
+.date-time-edit-container input{
+    background-color: var(--white-shade);
+    outline:none;
+    border:none;
+    margin-right:5px;
+}
+.date-time-edit-container button{
+    font-size: 12px;
+    padding:3px 15px;
+    margin-left:57px;
+    border:none;
+    outline:none;
+}
+.date-time-edit-container button:hover{
+   background-color: var(--orange-shade);
+   color: var(--white-shade);
+}
+@media only screen and (max-width:768px){
+    #list-container{
+        padding:0 20px;
+    }
+}
